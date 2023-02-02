@@ -1,9 +1,43 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Vitor Gouveia</title>
-	</head>
-	<body>
-		<h1>Minha página na root do github pages</h1>
-	</body>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vitor Gouveia</title>
+
+  <link rel="stylesheet" type="text/css" href="./src/styles/global.css" />
+  <link rel="stylesheet" type="text/css" href="./src/styles/header-skeleton.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/proxy-polyfill@0.3.0/proxy.min.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "lit": "https://esm.sh/lit?bundle",
+        "haunted": "https://esm.sh/haunted?bundle"
+      }
+    }
+  </script>
+
+  <script type="module" src="index.js"></script>
+</head>
+<body style="display: flex;">
+  <details-header>
+    <header>
+      <div class="image skeleton"></div>
+    
+      <!-- name -->
+      <h1 class="name skeleton"></h1>
+    
+      <!-- email -->
+      <p class="skeleton"></p>
+      <!-- phone -->
+      <p class="skeleton"></p>
+    </header>
+  </details-header>
+  
+  <tabs-navigation>
+  </tabs-navigation>
+</body>
 </html>
