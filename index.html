@@ -1,43 +1,266 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Vitor Gouveia</title>
-
-  <link rel="stylesheet" type="text/css" href="./src/styles/global.css" />
-  <link rel="stylesheet" type="text/css" href="./src/styles/header-skeleton.css" />
-
-  <script src="https://cdn.jsdelivr.net/npm/proxy-polyfill@0.3.0/proxy.min.js"></script>
-  <script type="importmap">
-    {
-      "imports": {
-        "lit": "https://esm.sh/lit?bundle",
-        "haunted": "https://esm.sh/haunted?bundle"
-      }
-    }
-  </script>
-
-  <script type="module" src="index.js"></script>
-</head>
-<body style="display: flex;">
-  <details-header>
-    <header>
-      <div class="image skeleton"></div>
+<html lang="en">
+  <head>
+    <title>Meus Projetos | Vitor Gouveia Portfólio</title>
+    <meta name="author" content="Vitor Gouveia.">
+    <meta name="description" content="Confira meus projetos mais recentes em design gráfico, desenvolvimento web e aplicativos móveis.">
     
-      <!-- name -->
-      <h1 class="name skeleton"></h1>
-    
-      <!-- email -->
-      <p class="skeleton"></p>
-      <!-- phone -->
-      <p class="skeleton"></p>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+
+    <link rel="stylesheet" href="./src/styles/global.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  </head>
+  <body class="p-10">
+    <header class="relative pt-[3.5rem] container">
+      <div class="gap-[2rem] grid">
+        <div class="flex flex-col items-center text-center">
+          <div class="profile__border border-[3.5px] border-[var(--first-color)] w-[115px] h-[115px] rounded-[50%] grid place-items-center mb-[0.75rem]">
+            <div
+              class="w-[100px] h-[100px] rounded-[50%] overflow-hidden flex items-end justify-center"
+              style="background: linear-gradient(180deg, hsla(var(--hue), var(--sat), var(--lig), 1) 0%, hsla(var(--hue), var(--sat), var(--lig), 0.2) 100%);"
+            >
+              <img
+                class="w-[75px]"
+                src="https://i.pinimg.com/originals/61/a5/a1/61a5a1eec1183ed481e9212a9ff506b0.jpg"
+                alt="Minha imagem"
+              >
+            </div>
+          </div>
+
+          <h2 class="profile__name">Vitor Gouveia</h2>
+          <h3 class="profile__profession">Web developer</h3>
+
+          <ul class="profile__social">
+            <a href="https://www.instagram.com/" target="_blank" class="profile__social-link">
+              <i class="ri-instagram-line"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/" target="_blank" class="profile__social-link">
+              <i class="ri-linkedin-box-line"></i>
+            </a>
+
+            <a href="https://www.github.com/" target="_blank" class="profile__social-link">
+              <i class="ri-github-line"></i>
+            </a>
+          </ul>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row items-center justify-evenly gap-[2.5rem]">
+          <div class="profile__info-group">
+            <h3 class="profile__info-number">7</h3>
+            <p class="profile__info-description">Years of <br> work</p>
+          </div>
+
+          <div class="profile__info-group">
+            <h3 class="profile__info-number">+124</h3>
+            <p class="profile__info-description">Completed <br> projects</p>
+          </div>
+           
+          <div class="profile__info-group">
+            <h3 class="profile__info-number">96</h3>
+            <p class="profile__info-description">Satisfied <br> customers</p>
+          </div>
+        </div>
+
+        <div class="profile__buttons flex flex-col sm:flex-row items-center justify-center gap-[1rem]">
+          <a download href="public/icon.svg" class="button">
+            Download CV <i class="ri-download-line"></i>
+          </a>
+
+          <div class="profile__buttons-small">
+            <a href="htps://api.whatsapp.com/send?phone=11940136716&text=Olá, gostaria de mais informações!" target="_blank" class="button button__small button__gray">
+              <i class="ri-whatsapp-line"></i>
+            </a>
+
+            <a href="https://www.google.com" target="_blank" class="button button__small button__gray">
+              <i class="ri-messenger-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
-  </details-header>
-  
-  <tabs-navigation>
-  </tabs-navigation>
-</body>
+
+    <main class="main">
+      <section class="filters container">
+        <ul class="filters__content">
+          <button class="filters__button filter-tab-active" data-target="#projects">
+            Projects
+          </button>
+
+          <button class="filters__button" data-target="#skills">
+            Skills
+          </button>
+        </ul>
+
+        <div class="filters__sections">
+          <div class="projects__content filters__active" data-content="" id="projects">
+            <article class="projects__card">
+              <img src="https://www.centurypublishing.com/wp-content/uploads/2013/02/Low-Resolution-Image.jpg" alt="" class="projects__img">
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Movil</span>
+
+                  <h3 class="projects__title">Fast food app</h3>
+
+                  <a href="#" class="projects__button button button__small">
+                    <i class="ri-link"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img src="https://www.centurypublishing.com/wp-content/uploads/2013/02/Low-Resolution-Image.jpg" alt="" class="projects__img">
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+
+                  <h3 class="projects__title">Payment Site</h3>
+
+                  <a href="#" class="projects__button button button__small">
+                    <i class="ri-link"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img src="https://www.centurypublishing.com/wp-content/uploads/2013/02/Low-Resolution-Image.jpg" alt="" class="projects__img">
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+
+                  <h3 class="projects__title">Portfolio website</h3>
+
+                  <a href="#" class="projects__button button button__small">
+                    <i class="ri-link"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+            
+            <article class="projects__card">
+              <img src="https://www.centurypublishing.com/wp-content/uploads/2013/02/Low-Resolution-Image.jpg" alt="" class="projects__img">
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Design</span>
+
+                  <h3 class="projects__title">Music app design</h3>
+
+                  <a href="#" class="projects__button button button__small">
+                    <i class="ri-link"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="skills__content" data-content="" id="skills">
+            <div class="skills__area">
+              <h3 class="skills__title">
+                Desenvolvimento de Sites
+              </h3>
+
+              <div class="skills__box">
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">SEO</h3>
+                      <span class="skills__level">Advanced</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Responsividade</h3>
+                      <span class="skills__level">Advanced</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Google Analytics</h3>
+                      <span class="skills__level">N/A</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills__area">
+              <h3 class="skills__title">
+                Marketing Digital
+              </h3>
+
+              <div class="skills__box">
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Conteúdo Inteligente</h3>
+                      <span class="skills__level">Básico</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Gestão de Perfis</h3>
+                      <span class="skills__level">Básico</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Google Analytics</h3>
+                      <span class="skills__level">N/A</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <span class="footer__copy">
+        &#169; Vitor Gouveia
+      </span>
+    </footer>
+
+    <script defer type="module" src="/src/main.ts"></script>
+  </body>
 </html>
